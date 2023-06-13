@@ -1,0 +1,78 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+}
+.App{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient( black, #3b3b3b);    
+}
+
+.title{
+    font-size: 50px;
+    color: #ffffff;
+    background: transparent;
+}
+
+.container{
+    background-color: transparent;
+    margin:20px;
+}
+
+.btn{
+    display: flex;
+    position: relative;
+    width: 151px;
+    height: 56px;
+    border-radius: 7px;
+    overflow: hidden ;
+    align-items: center;
+    justify-content: center;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(#121212, #595959);
+    animation: efeito 1.3s ease infinite;
+    transition: 1s;
+}
+@keyframes efeito {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.container:hover .btn::before{
+    background:#595959 ;
+}
+button{
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width:147px;
+    height:52px;
+    background: #121212;
+    text-align: center;
+    line-height: 52px;
+    border:0;
+    border-radius: 6px;
+    text-decoration: none;
+    color:#fff;
+    letter-spacing:1px;
+    cursor: pointer;
+}
+
+p{
+    color:#fff
+}
+
+.container-iframe{
+    display:none;
+}
